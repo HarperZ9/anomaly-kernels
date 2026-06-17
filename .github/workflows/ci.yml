@@ -1,4 +1,4 @@
-﻿name: c++
+name: c++
 
 on:
   push:
@@ -15,3 +15,5 @@ jobs:
         run: cmake -S . -B build
       - name: Build
         run: cmake --build build -j 2
+      - name: Test
+        run: ctest --test-dir build --output-on-failure

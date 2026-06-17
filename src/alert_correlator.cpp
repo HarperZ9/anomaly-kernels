@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <numeric>
 
-namespace we::anomaly {
+namespace anomaly {
 
 // ---------------------------------------------------------------------------
 // Public API
@@ -133,4 +133,4 @@ auto AlertCorrelator::alerts_in_window(
     return groups;
 }
 
-} // namespace we::anomaly
+} // namespace anomaly

@@ -6,19 +6,19 @@
 // correlated alert bundles with combined severity and human-readable
 // narratives.
 //
-// Namespace: we::anomaly
+// Namespace: anomaly
 // =============================================================================
 
 #pragma once
-#ifndef ANOMALY_ALERT_CORRELATOR_H
-#define ANOMALY_ALERT_CORRELATOR_H
+#ifndef ANOMALY_KERNELS_ALERT_CORRELATOR_H
+#define ANOMALY_KERNELS_ALERT_CORRELATOR_H
 
 #include <cstdint>
 #include <string>
 #include <utility>
 #include <vector>
 
-namespace we::anomaly {
+namespace anomaly {
 
 // ---------------------------------------------------------------------------
 // Alert — single detection signal
@@ -93,6 +93,6 @@ private:
     uint32_t           next_id_ = 1;
 };
 
-} // namespace we::anomaly
+} // namespace anomaly
 
-#endif // ANOMALY_ALERT_CORRELATOR_H
+#endif // ANOMALY_KERNELS_ALERT_CORRELATOR_H

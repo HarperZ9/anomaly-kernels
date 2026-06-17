@@ -6,12 +6,12 @@
 // computes statistical aggregates (mean, stddev, min, max) over a
 // configurable time window.
 //
-// Namespace: we::anomaly
+// Namespace: anomaly
 // =============================================================================
 
 #pragma once
-#ifndef ANOMALY_BASELINE_BUILDER_H
-#define ANOMALY_BASELINE_BUILDER_H
+#ifndef ANOMALY_KERNELS_BASELINE_BUILDER_H
+#define ANOMALY_KERNELS_BASELINE_BUILDER_H
 
 #include <cstdint>
 #include <expected>
@@ -20,7 +20,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace we::anomaly {
+namespace anomaly {
 
 // ---------------------------------------------------------------------------
 // MetricType — categories of observable host behavior
@@ -98,6 +98,6 @@ private:
     std::unordered_map<uint8_t, std::vector<BaselineSample>> samples_;
 };
 
-} // namespace we::anomaly
+} // namespace anomaly
 
-#endif // ANOMALY_BASELINE_BUILDER_H
+#endif // ANOMALY_KERNELS_BASELINE_BUILDER_H

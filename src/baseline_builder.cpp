@@ -12,7 +12,7 @@
 #include <limits>
 #include <numeric>
 
-namespace we::anomaly {
+namespace anomaly {
 
 // ---------------------------------------------------------------------------
 // Public API
@@ -111,4 +111,4 @@ auto BaselineBuilder::compute_stddev(const std::vector<double>& samples,
     return std::sqrt(sq_sum / static_cast<double>(samples.size()));
 }
 
-} // namespace we::anomaly
+} // namespace anomaly

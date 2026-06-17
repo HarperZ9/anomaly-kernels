@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <cmath>
 
-namespace we::anomaly {
+namespace anomaly {
 
 // ---------------------------------------------------------------------------
 // Public API
@@ -110,4 +110,4 @@ auto AnomalyScorer::is_anomalous(const AnomalyScore& s,
     return std::abs(s.z_score) >= threshold;
 }
 
-} // namespace we::anomaly
+} // namespace anomaly

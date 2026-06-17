@@ -6,12 +6,12 @@
 // anomalous/normal classification.  Supports multiple scoring methods:
 // Z-Score, IQR, Moving Average, and Percentile.
 //
-// Namespace: we::anomaly
+// Namespace: anomaly
 // =============================================================================
 
 #pragma once
-#ifndef ANOMALY_ANOMALY_SCORER_H
-#define ANOMALY_ANOMALY_SCORER_H
+#ifndef ANOMALY_KERNELS_ANOMALY_SCORER_H
+#define ANOMALY_KERNELS_ANOMALY_SCORER_H
 
 #include <cstdint>
 #include <string_view>
@@ -19,7 +19,7 @@
 
 #include "baseline_builder.h"
 
-namespace we::anomaly {
+namespace anomaly {
 
 // ---------------------------------------------------------------------------
 // ScoringMethod — algorithm used to evaluate deviation
@@ -96,6 +96,6 @@ public:
                                            double threshold) -> bool;
 };
 
-} // namespace we::anomaly
+} // namespace anomaly
 
-#endif // ANOMALY_ANOMALY_SCORER_H
+#endif // ANOMALY_KERNELS_ANOMALY_SCORER_H
