@@ -12,7 +12,7 @@
 #include <cmath>
 #include <vector>
 
-using namespace we::anomaly;
+using namespace anomaly;
 
 TEST_SUITE("anomaly::AnomalyScorer") {
 

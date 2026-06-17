@@ -1,4 +1,5 @@
-﻿# AGENTS for warden-anomaly
+# AGENTS for anomaly-kernels
 
-Scope: this is a public distribution leaf derived from private WARDEN code.
-No secrets, no credentials, no private infrastructure data.
+Scope: this is a standalone, public blue-team telemetry-analytics library.
+It contains only statistical anomaly-detection kernels. No secrets, no
+credentials, no private infrastructure data.

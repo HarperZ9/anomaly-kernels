@@ -1,18 +1,21 @@
-﻿# Warden Anomaly Scoring
+# anomaly-kernels
 
-`warden-anomaly` publishes a compact statistical anomaly detection engine from WARDEN:
+`anomaly-kernels` is a standalone, public blue-team telemetry-analytics
+library. It publishes a compact set of statistical anomaly-detection kernels:
 
-- baseline builder
-- scoring engines (Z-Score, IQR, percentile, moving-average behavior)
-- rule-based behavior classifier
-- alert correlator
+- baseline builder (per-metric mean / stddev / min / max profiling)
+- scoring engine (z-score, IQR, percentile)
+- temporal alert correlator (multi-signal fusion by time window)
 
-It is designed for telemetry quality and detection analytics. It does not include
-execution primitives, exploit chains, or credential workflows.
+It is designed for telemetry quality and detection analytics. It does not
+include execution primitives, exploit chains, credential workflows, or any
+host-intrusion / SOC threat taxonomy.
 
-## Public leaves and gates
+The C++ namespace for all public types is `anomaly`.
 
-- Test gate: module-focused anomaly tests are included in `tests/`.
+## Gates
+
+- Test gate: module-focused unit tests in `tests/`, wired into CTest.
 - License gate: `LICENSE` present (MIT).
 - Secret gate: no credentials, `.env`, keys, or auth files in this export.
 - Claim gate: `PUBLIC-CLAIM.md` and `PUBLIC-DISCLAIMER.md` present.
@@ -22,4 +25,12 @@ execution primitives, exploit chains, or credential workflows.
 ```bash
 cmake -S . -B build
 cmake --build build
+```
+
+## Test
+
+```bash
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build --output-on-failure
 ```
