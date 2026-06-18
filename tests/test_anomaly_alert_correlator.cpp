@@ -83,14 +83,14 @@ TEST_SUITE("anomaly::AlertCorrelator") {
         a1.description   = "Scan A";
         a1.severity      = 0.5f;
         a1.timestamp     = 100;
-        correlator.add_alert(a1);
+        static_cast<void>(correlator.add_alert(a1));
 
         Alert a2;
         a2.source_module = "sense";
         a2.description   = "Tamper B";
         a2.severity      = 0.6f;
         a2.timestamp     = 150;
-        correlator.add_alert(a2);
+        static_cast<void>(correlator.add_alert(a2));
 
         // Group 2: timestamp 500 (outside window from group 1)
         Alert a3;
@@ -98,7 +98,7 @@ TEST_SUITE("anomaly::AlertCorrelator") {
         a3.description   = "Oracle C";
         a3.severity      = 0.4f;
         a3.timestamp     = 500;
-        correlator.add_alert(a3);
+        static_cast<void>(correlator.add_alert(a3));
 
         CorrelationConfig config;
         config.time_window_ms = 200;
@@ -122,7 +122,7 @@ TEST_SUITE("anomaly::AlertCorrelator") {
         a1.timestamp = 100;
         a1.source_module = "x";
         a1.description   = "event";
-        correlator.add_alert(a1);
+        static_cast<void>(correlator.add_alert(a1));
 
         CorrelationConfig config;
         config.time_window_ms = 1000;
@@ -164,10 +164,10 @@ TEST_SUITE("anomaly::AlertCorrelator") {
         Alert a;
         a.source_module = "test";
         a.description   = "test alert";
-        correlator.add_alert(a);
+        static_cast<void>(correlator.add_alert(a));
         CHECK(correlator.pending_count() == 1);
 
-        correlator.add_alert(a);
+        static_cast<void>(correlator.add_alert(a));
         CHECK(correlator.pending_count() == 2);
     }
 
@@ -177,7 +177,7 @@ TEST_SUITE("anomaly::AlertCorrelator") {
         Alert a;
         a.source_module = "test";
         a.description   = "test";
-        correlator.add_alert(a);
+        static_cast<void>(correlator.add_alert(a));
         CHECK(correlator.pending_count() == 1);
 
         correlator.clear();
@@ -210,14 +210,14 @@ TEST_SUITE("anomaly::AlertCorrelator") {
         a1.description   = "low sev";
         a1.severity      = 0.1f;
         a1.timestamp     = 100;
-        correlator.add_alert(a1);
+        static_cast<void>(correlator.add_alert(a1));
 
         Alert a2;
         a2.source_module = "y";
         a2.description   = "low sev 2";
         a2.severity      = 0.1f;
         a2.timestamp     = 110;
-        correlator.add_alert(a2);
+        static_cast<void>(correlator.add_alert(a2));
 
         CorrelationConfig config;
         config.time_window_ms     = 200;
