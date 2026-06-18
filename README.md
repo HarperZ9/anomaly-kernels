@@ -1,11 +1,11 @@
 # Anomaly Kernels
 
-> Header-only C++23 anomaly-detection kernels: baselines, z-score/IQR, and temporal correlation.
+> C++23 anomaly-detection kernels: baselines, z-score/IQR, and temporal correlation. Builds as a Windows x64 static library.
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![C++23](https://img.shields.io/badge/C%2B%2B-23-blue.svg)
 [![CI](https://github.com/HarperZ9/anomaly-kernels/actions/workflows/ci.yml/badge.svg)](https://github.com/HarperZ9/anomaly-kernels/actions/workflows/ci.yml)
-![header-only](https://img.shields.io/badge/header--only-C%2B%2B23-success.svg)
+![static library](https://img.shields.io/badge/static_library-C%2B%2B23-success.svg)
 [![part of: AI-accountability toolkit](https://img.shields.io/badge/part_of-AI--accountability_toolkit-7a5cff.svg)](https://harperz9.github.io)
 
 `anomaly-kernels` is a standalone, public blue-team telemetry-analytics
@@ -19,7 +19,26 @@ It is designed for telemetry quality and detection analytics. It does not
 include execution primitives, exploit chains, credential workflows, or any
 host-intrusion / SOC threat taxonomy.
 
-The C++ namespace for all public types is `anomaly`.
+The C++ namespace for all public types is `anomaly`. It targets Windows
+x64 and compiles as a `STATIC` library (`anomaly-kernels.lib`) — not a
+header-only library. There is no CLI; you link the library and include
+the headers under `include/anomaly/`.
+
+## Usage
+
+See [USAGE.md](USAGE.md) for the install/link line, the public API of all
+three components, worked examples with expected output, and the runnable
+demo in [`examples/demo.cpp`](examples/demo.cpp). Quick taste:
+
+```cpp
+#include <anomaly/baseline_builder.h>
+using namespace anomaly;
+
+BaselineBuilder builder;
+builder.add_sample(MetricType::CpuUsage, 50.0);
+builder.add_sample(MetricType::CpuUsage, 52.0);
+auto baseline = builder.build(MetricType::CpuUsage);  // std::expected<Baseline, std::string>
+```
 
 ## Gates
 
@@ -30,17 +49,22 @@ The C++ namespace for all public types is `anomaly`.
 
 ## Build
 
+Windows x64 only (the CMake configure step hard-fails elsewhere). The MSVC
+generator is multi-config, so name the configuration explicitly:
+
 ```bash
 cmake -S . -B build
-cmake --build build
+cmake --build build --config Debug
 ```
+
+This produces `build/Debug/anomaly-kernels.lib`.
 
 ## Test
 
 ```bash
 cmake -S . -B build
-cmake --build build
-ctest --test-dir build --output-on-failure
+cmake --build build --config Debug
+ctest --test-dir build -C Debug --output-on-failure
 ```
 
 ---
