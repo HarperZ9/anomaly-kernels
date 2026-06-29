@@ -1,5 +1,40 @@
 # Anomaly Kernels
 
+![Anomaly Kernels hero](docs/brand/anomaly-kernels-hero.png)
+
+> Score telemetry outliers with C++23 baselines, statistical detectors, and correlation windows.
+
+Anomaly Kernels is a small C++23 library for detection analytics. It builds
+baselines, scores new samples with z-score/IQR/percentile methods, correlates
+alerts over time, and keeps the output narrow enough to review as evidence.
+
+## Why it matters
+
+AI and security workflows need fast local primitives for telemetry quality before
+larger models or dashboards interpret the data. This repo provides reusable
+kernels that can feed receipt-backed detection and validation pipelines.
+
+## Try it
+
+```bash
+cmake -S . -B build
+cmake --build build --config Debug
+ctest --test-dir build -C Debug --output-on-failure
+```
+
+## What to test first
+
+- Build the static library with CMake.
+- Run the CTest suite.
+- Link `anomaly-kernels.lib` and include headers under `include/anomaly/`.
+
+## Current status
+
+Windows x64 C++23 static library with tests, public claim files, and release
+gates. It is telemetry analytics, not exploit or host-intrusion tooling.
+
+## Existing technical notes
+
 > C++23 anomaly-detection kernels: baselines, z-score/IQR, and temporal correlation. Builds as a Windows x64 static library.
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
