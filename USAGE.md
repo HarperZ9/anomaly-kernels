@@ -2,7 +2,7 @@
 
 `anomaly-kernels` is a Windows x64, C++23 **static library**. You link
 against it and include the headers under `include/anomaly/`. There is no
-CLI and no console script — the public surface is three C++ classes in the
+CLI and no console script -- the public surface is three C++ classes in the
 `anomaly` namespace:
 
 | Component         | Header                            | Role                                                        |
@@ -44,7 +44,7 @@ propagates as a `PUBLIC` compile feature.
 
 ---
 
-## Example 1 — Build a baseline
+## Example 1 -- Build a baseline
 
 `BaselineBuilder::build` returns `std::expected<Baseline, std::string>`;
 it returns `std::unexpected(...)` when no samples exist for the metric.
@@ -76,7 +76,7 @@ Output (verified against the built `Debug` library):
 mean=50.0000 stddev=1.2910 min=48.0 max=52.0 n=6
 ```
 
-## Example 2 — Score an observation
+## Example 2 -- Score an observation
 
 `AnomalyScorer::score` uses the z-score path. `is_anomalous` is set when
 `|z| >= threshold * sensitivity` (defaults: `threshold = 3.0`,
@@ -107,7 +107,7 @@ double iqr = AnomalyScorer::iqr_score(40.0, 10.0, 20.0);      // 0.5
 double p25 = AnomalyScorer::percentile({10,20,30,40}, 0.25);  // 17.5 (interp.)
 ```
 
-## Example 3 — Correlate alerts
+## Example 3 -- Correlate alerts
 
 `add_alert` assigns and returns an incrementing `id` (starting at 1).
 `correlate` groups pending alerts whose timestamps fall within
@@ -147,7 +147,7 @@ auto bundles = c.correlate(cc);   // bundles.size() == 1
 //   "[net-monitor] NetworkConnectionRate spike"
 ```
 
-## Example 4 — Static helpers, no objects
+## Example 4 -- Static helpers, no objects
 
 Every component exposes pure static functions usable in isolation:
 
@@ -165,7 +165,7 @@ AlertCorrelator::combine_severity(alerts);                      // max + 0.1*(n-
 
 `examples/demo.cpp` exercises all three components end to end. After
 building the library (above), compile and link it against the produced
-`.lib` from a Developer Command Prompt (CRT flag must match the library —
+`.lib` from a Developer Command Prompt (CRT flag must match the library --
 `/MDd` for the `Debug` build):
 
 ```bat

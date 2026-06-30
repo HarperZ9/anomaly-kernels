@@ -21,7 +21,7 @@
 namespace anomaly {
 
 // ---------------------------------------------------------------------------
-// Alert — single detection signal
+// Alert -- single detection signal
 // ---------------------------------------------------------------------------
 
 struct Alert {
@@ -35,7 +35,7 @@ struct Alert {
 };
 
 // ---------------------------------------------------------------------------
-// CorrelatedAlert — fused alert group
+// CorrelatedAlert -- fused alert group
 // ---------------------------------------------------------------------------
 
 struct CorrelatedAlert {
@@ -47,7 +47,7 @@ struct CorrelatedAlert {
 };
 
 // ---------------------------------------------------------------------------
-// CorrelationConfig — fusion parameters
+// CorrelationConfig -- fusion parameters
 // ---------------------------------------------------------------------------
 
 struct CorrelationConfig {
@@ -57,7 +57,7 @@ struct CorrelationConfig {
 };
 
 // ---------------------------------------------------------------------------
-// AlertCorrelator — accumulator + fusion engine
+// AlertCorrelator -- accumulator + fusion engine
 // ---------------------------------------------------------------------------
 
 class AlertCorrelator {

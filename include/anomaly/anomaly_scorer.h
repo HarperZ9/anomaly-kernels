@@ -22,7 +22,7 @@
 namespace anomaly {
 
 // ---------------------------------------------------------------------------
-// ScoringMethod — algorithm used to evaluate deviation
+// ScoringMethod -- algorithm used to evaluate deviation
 // ---------------------------------------------------------------------------
 
 enum class ScoringMethod : uint8_t {
@@ -33,7 +33,7 @@ enum class ScoringMethod : uint8_t {
 };
 
 // ---------------------------------------------------------------------------
-// AnomalyScore — result of scoring a single observation
+// AnomalyScore -- result of scoring a single observation
 // ---------------------------------------------------------------------------
 
 struct AnomalyScore {
@@ -47,7 +47,7 @@ struct AnomalyScore {
 };
 
 // ---------------------------------------------------------------------------
-// ScoringConfig — tuning knobs for the scorer
+// ScoringConfig -- tuning knobs for the scorer
 // ---------------------------------------------------------------------------
 
 struct ScoringConfig {
@@ -58,7 +58,7 @@ struct ScoringConfig {
 };
 
 // ---------------------------------------------------------------------------
-// AnomalyScorer — stateless scoring engine
+// AnomalyScorer -- stateless scoring engine
 // ---------------------------------------------------------------------------
 
 class AnomalyScorer {

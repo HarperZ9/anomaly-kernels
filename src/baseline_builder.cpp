@@ -1,5 +1,5 @@
 // =============================================================================
-// Anomaly: Baseline Builder — Implementation
+// Anomaly: Baseline Builder -- Implementation
 //
 // Accumulates per-metric-type samples and computes statistical baselines
 // (mean, stddev, min, max) on demand.

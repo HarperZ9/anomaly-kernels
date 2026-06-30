@@ -1,5 +1,5 @@
 // =============================================================================
-// Tests: Anomaly — AlertCorrelator
+// Tests: Anomaly -- AlertCorrelator
 //
 // Validates alert ID assignment, severity combination, temporal grouping,
 // narrative construction, pending count tracking, and buffer clearing.

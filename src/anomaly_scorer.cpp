@@ -1,5 +1,5 @@
 // =============================================================================
-// Anomaly: Anomaly Scorer — Implementation
+// Anomaly: Anomaly Scorer -- Implementation
 //
 // Statistical deviation scoring.  Primary method is Z-score with fallback
 // to IQR and percentile-based approaches.  Severity mapping:

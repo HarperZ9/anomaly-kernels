@@ -1,5 +1,5 @@
 # =============================================================================
-# anomaly-kernels: Statistical Telemetry Anomaly Detection — Static Library
+# anomaly-kernels: Statistical Telemetry Anomaly Detection -- Static Library
 #
 # A standalone blue-team telemetry-analytics library.  Ships the statistical
 # kernels only: baseline profiling (BaselineBuilder), statistical deviation
@@ -20,7 +20,7 @@ if(NOT WIN32)
 endif()
 
 # -----------------------------------------------------------------------------
-# Public library target — statistical kernels only.
+# Public library target -- statistical kernels only.
 #
 # The host-intrusion / SOC threat taxonomy (behavior classifier) is NOT part
 # of the public surface and is intentionally not compiled here.
@@ -65,7 +65,7 @@ if(MSVC)
 endif()
 
 # -----------------------------------------------------------------------------
-# Tests — doctest, fetched on demand.  Disable with -DANOMALY_KERNELS_TESTS=OFF.
+# Tests -- doctest, fetched on demand.  Disable with -DANOMALY_KERNELS_TESTS=OFF.
 # -----------------------------------------------------------------------------
 
 option(ANOMALY_KERNELS_TESTS "Build anomaly-kernels unit tests" ON)
