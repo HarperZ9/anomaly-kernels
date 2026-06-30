@@ -1,5 +1,5 @@
 // =============================================================================
-// Tests: Anomaly — BaselineBuilder
+// Tests: Anomaly -- BaselineBuilder
 //
 // Validates metric sample accumulation, statistical computation
 // (mean, stddev), baseline building, and metric name resolution.

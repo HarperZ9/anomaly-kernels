@@ -23,7 +23,7 @@
 namespace anomaly {
 
 // ---------------------------------------------------------------------------
-// MetricType — categories of observable host behavior
+// MetricType -- categories of observable host behavior
 // ---------------------------------------------------------------------------
 
 enum class MetricType : uint8_t {
@@ -37,7 +37,7 @@ enum class MetricType : uint8_t {
 };
 
 // ---------------------------------------------------------------------------
-// BaselineSample — single point observation
+// BaselineSample -- single point observation
 // ---------------------------------------------------------------------------
 
 struct BaselineSample {
@@ -47,7 +47,7 @@ struct BaselineSample {
 };
 
 // ---------------------------------------------------------------------------
-// Baseline — computed statistical summary for one metric type
+// Baseline -- computed statistical summary for one metric type
 // ---------------------------------------------------------------------------
 
 struct Baseline {
@@ -61,7 +61,7 @@ struct Baseline {
 };
 
 // ---------------------------------------------------------------------------
-// BaselineBuilder — accumulates samples and computes baselines
+// BaselineBuilder -- accumulates samples and computes baselines
 // ---------------------------------------------------------------------------
 
 class BaselineBuilder {

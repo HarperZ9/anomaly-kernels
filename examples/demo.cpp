@@ -1,13 +1,13 @@
 // =============================================================================
-// Best-effort demo — not runtime-verified by author.
+// Best-effort demo -- not runtime-verified by author.
 //
 // End-to-end walkthrough of the three anomaly-kernels public components:
 //
-//   1. BaselineBuilder  — accumulate metric samples, build a statistical
+//   1. BaselineBuilder  -- accumulate metric samples, build a statistical
 //                         baseline (mean / stddev / min / max).
-//   2. AnomalyScorer    — score a live observation against that baseline
+//   2. AnomalyScorer    -- score a live observation against that baseline
 //                         (z-score, severity, anomalous/normal verdict).
-//   3. AlertCorrelator  — fuse multiple alerts by temporal proximity into
+//   3. AlertCorrelator  -- fuse multiple alerts by temporal proximity into
 //                         a single correlated bundle with a narrative.
 //
 // Only public API declared in include/anomaly/*.h is used. Build via the

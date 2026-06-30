@@ -1,5 +1,5 @@
 // =============================================================================
-// Anomaly: Alert Correlator — Implementation
+// Anomaly: Alert Correlator -- Implementation
 //
 // Temporal alert fusion.  Alerts are grouped by sliding time window,
 // combined severity = max(severities) + 0.1 * (count - 1), and a

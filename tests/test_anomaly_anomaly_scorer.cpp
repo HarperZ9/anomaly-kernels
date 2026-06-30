@@ -1,5 +1,5 @@
 // =============================================================================
-// Tests: Anomaly — AnomalyScorer
+// Tests: Anomaly -- AnomalyScorer
 //
 // Validates z-score calculation, IQR scoring, percentile interpolation,
 // severity mapping, method name resolution, and anomaly classification.
@@ -122,7 +122,7 @@ TEST_SUITE("anomaly::AnomalyScorer") {
         CHECK(AnomalyScorer::is_anomalous(exact, 3.0));
     }
 
-    TEST_CASE("score integration — anomalous observation") {
+    TEST_CASE("score integration -- anomalous observation") {
         Baseline b;
         b.mean   = 50.0;
         b.stddev = 5.0;

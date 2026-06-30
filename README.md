@@ -55,7 +55,7 @@ include execution primitives, exploit chains, credential workflows, or any
 host-intrusion / SOC threat taxonomy.
 
 The C++ namespace for all public types is `anomaly`. It targets Windows
-x64 and compiles as a `STATIC` library (`anomaly-kernels.lib`) — not a
+x64 and compiles as a `STATIC` library (`anomaly-kernels.lib`) -- not a
 header-only library. There is no CLI; you link the library and include
 the headers under `include/anomaly/`.
 
@@ -103,7 +103,7 @@ ctest --test-dir build -C Debug --output-on-failure
 ```
 
 ---
-**Zain Dana Harper** — small tools with explicit edges.
+**Zain Dana Harper** -- small tools with explicit edges.
 [Portfolio](https://harperz9.github.io) · [HarperZ9](https://github.com/HarperZ9)
 <sub>Built with Claude Code; reviewed, tested, and owned by me.</sub>
 
