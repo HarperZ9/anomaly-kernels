@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/assets/zentropy-banner.png" alt="anomaly-kernels" width="100%"></p>
+
 # Anomaly Kernels
 
 ![Anomaly Kernels hero](docs/brand/anomaly-kernels-hero.png)
@@ -116,3 +118,7 @@ cmake -S . -B build
 cmake --build build
 ctest --test-dir build --output-on-failure
 ```
+
+---
+
+**[Zentropy Labs](https://github.com/ZentropyLabs-ai)** · order out of entropy. An independent lab building evidence-first tools that leave a re-checkable artifact behind. Built by Zain Dana Harper in Seattle. The full workbench is at [Project Telos](https://harperz9.github.io).
