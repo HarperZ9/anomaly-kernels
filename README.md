@@ -1,10 +1,19 @@
-<p align="center"><img src=".github/assets/banner.png" alt="anomaly-kernels" width="100%"></p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarperZ9/anomaly-kernels/main/docs/art/hero-dark.svg">
+  <img src="https://raw.githubusercontent.com/HarperZ9/anomaly-kernels/main/docs/art/hero-light.svg" alt="anomaly-kernels: Score telemetry outliers with C++23 baselines and correlation windows. 5 wavering traces run from the left and narrow into a bright core over a row of tick marks." width="100%">
+</picture>
 
-# Anomaly Kernels
+# anomaly-kernels
 
-![Anomaly Kernels hero](docs/brand/anomaly-kernels-hero.png)
+Score telemetry outliers with C++23 baselines and correlation windows.
 
-> Score telemetry outliers with C++23 baselines, statistical detectors, and correlation windows.
+```
+cmake -S . -B build
+```
+
+[![CI](https://github.com/HarperZ9/anomaly-kernels/actions/workflows/ci.yml/badge.svg)](https://github.com/HarperZ9/anomaly-kernels/actions/workflows/ci.yml)
+[![license](https://img.shields.io/badge/license-MIT-e6e1d6?style=flat-square&labelColor=1a1712)](https://github.com/HarperZ9/anomaly-kernels/blob/main/LICENSE)
+![C++23](https://img.shields.io/badge/language-C%2B%2B23-e6e1d6?style=flat-square&labelColor=1a1712)
 
 Anomaly Kernels is a small C++23 library for detection analytics. It builds
 baselines, scores new samples with z-score/IQR/percentile methods, correlates
