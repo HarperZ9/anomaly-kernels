@@ -1,3 +1,5 @@
+> **This repository is archived.** The code moved to The Playground: [`HarperZ9/superframe/packages/kernels/anomaly-kernels`](https://github.com/HarperZ9/superframe/tree/main/packages/kernels/anomaly-kernels) (merge commit `87421583`). Work continues there. This copy keeps the earlier history and releases.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarperZ9/anomaly-kernels/main/docs/art/hero-dark.svg">
   <img src="https://raw.githubusercontent.com/HarperZ9/anomaly-kernels/main/docs/art/hero-light.svg" alt="anomaly-kernels: Score telemetry outliers with C++23 baselines and correlation windows. 5 wavering traces run from the left and narrow into a bright core over a row of tick marks." width="100%">
